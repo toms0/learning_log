@@ -1,0 +1,26 @@
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+
+    {% if user.is_authenticated %}
+        <div class="jumbotron">
+            <h2 class="display-3">Welcome back, {{ user.username }}.</h2>
+
+            <p class="lead">View your current topics below.</p>
+
+            <a class="btn btn-lg btn-primary" href="{% url 'learning_logs:topics' %}" role="button">
+                Topics &raquo;
+            </a>
+        </div>
+    {% else %}
+        <div class="jumbotron">
+            <h1 class="display-3">Learning Log.</h1>
+
+            <p class="lead">Start your learning journey.</p>
+
+            <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">
+                Register &raquo;
+            </a>
+        </div>
+    {% endif %}
+{% endblock page_header %}
