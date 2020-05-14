@@ -6,4 +6,4 @@ Learning Log is a web-app that allows users to log the topics they're interested
 - Django
 - Python 3
 - Bootstrap4
-(- HTML5)
+- (HTML5)
